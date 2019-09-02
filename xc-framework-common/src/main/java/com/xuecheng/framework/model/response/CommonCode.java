@@ -1,5 +1,6 @@
 package com.xuecheng.framework.model.response;
 
+import com.xuecheng.framework.model.request.RequestData;
 import lombok.ToString;
 
 /**
@@ -11,7 +12,7 @@ import lombok.ToString;
 
 @ToString
 public enum CommonCode implements ResultCode{
-
+    INVALIDPARAM(false,10003,"非法参数"),
     SUCCESS(true,10000,"操作成功！"),
     FAIL(false,11111,"操作失败！"),
     UNAUTHENTICATED(false,10001,"此操作需要登陆系统！"),
@@ -43,6 +44,5 @@ public enum CommonCode implements ResultCode{
     public String message() {
         return message;
     }
-
 
 }
