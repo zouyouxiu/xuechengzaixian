@@ -43,8 +43,6 @@ public class ExceptionCatch {
         }
         //从EXCEPTIONS中找异常类型对应的错误代码，如果找到了将错误代码响应给用户，如果找不到给用户响应99999异常
         ResultCode resultCode = EXCEPTIONS.get(exception.getClass());
-        System.out.println(exception.getClass());
-        System.out.println(exception.getClass().toString());
         if (resultCode != null) {
             return new ResponseResult(resultCode);
         } else {
