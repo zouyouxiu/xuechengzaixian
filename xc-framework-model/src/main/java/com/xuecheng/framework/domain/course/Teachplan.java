@@ -1,5 +1,7 @@
 package com.xuecheng.framework.domain.course;
 
+import ch.qos.logback.core.recovery.ResilientSyslogOutputStream;
+import jdk.nashorn.internal.ir.IfNode;
 import lombok.Data;
 import lombok.ToString;
 import org.hibernate.annotations.GenericGenerator;
@@ -13,7 +15,7 @@ import java.io.Serializable;
 @Data
 @ToString
 @Entity
-@Table(name="teachplan")
+@Table(name = "teachplan")
 @GenericGenerator(name = "jpa-uuid", strategy = "uuid")
 public class Teachplan implements Serializable {
     private static final long serialVersionUID = -916357110051689485L;

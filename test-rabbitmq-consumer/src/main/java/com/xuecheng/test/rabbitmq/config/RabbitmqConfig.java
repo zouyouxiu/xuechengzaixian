@@ -51,5 +51,4 @@ public class RabbitmqConfig {
         return BindingBuilder.bind(queue).to(exchange).with(ROUTINGKEY_SMS).noargs();
     }
 
-
 }
